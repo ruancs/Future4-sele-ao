@@ -1,159 +1,162 @@
 <!DOCTYPE html>
-<charset>
-	<html>
-	<meta charset="utf-8" />
-	<title>Projeto Seletivo Future4 - Ruan Carlos</title>
-
-	<head>
-		<div id="divmenu">
-			<strong>HOME
-
-    CURSOS
-
-    CONTATO</strong>
-
- 
-  </div>
-
-
-  <style type="text/css">
-
-  #frase{
-    text-align:right;
-    margin-top:100px;
-    color:#FFFFFF;
+<html>
+	<meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <head>
+        <title>Projeto Seletivo Future4 - Ruan Carlos</title>
+      
+         <div id="divmenu">
+          <strong>HOME CURSOS CONTATO</strong>
     
+        </div>
+
+
+        <style type="text/css">
+       
+
+          #frase {            /* frase do footer */
+          text-align:right;
+          margin-top:100px;
+          color:#FFFFFF;
+          }
+
+
+          #divmenu {       /*barra de menu */
+          box-sizing:border-box;
+          display:block;
+          color:#FFFFFF;
+          margin:-8px;       
+          word-spacing:30px;
+          font-family:arial;
+          letter-spacing:0px;
+          font-size:20px;
+          text-align:right;
+          padding:15px;
+          background-color:#CD4C00;
+          }
+
+          h1{              /*estilo do títilo*/
+          color: #FFFFFF;
+          font-family: arial;
+          font-size: 25px;
+          letter-spacing:-1px;
+          text-align:center;
+          margin-top:70px;
+          margin-bottom:70px;
+          }
+
+          #div1{              /*estilo da div da imagem*/
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          cursor:pointer;
+          }
+
+          body{
+          background-color:#595F96;
+          
+          }
+
+          #divfooter{  
+          box-sizing:border-box;
+          display:block;   
+          text-align:center;
+          color:#FFFFFF;
+          height:80px;
+          width:100%;
+          position:absolute;
+          bottom:0;
+          left:0;          
+          background-color:#D8D8D8;
+           }
+
+          #frase{
+          text-align:right;
+          position:absolute;
+          bottom:12%;
+          right:2%;
+          font-family:arial;
+          font-size:20px;
+          font-style:italic;
+          }
+
+
+          #emailrec{
+          position:relative;
+          top:22px;
+          border:2px solid grey;
+          font-family:Arial;
+          letter-spacing:-1px;
+          font-size:16px;
+          width:250px;  
+          height:33px;
+          }
+
+          .botao{
+          position:relative;
+          top:20px;
+          left:-5px;
+          width:80px;
+          height:40px;
+          font-weight:600;
+          color:#fff;     
+          border:2px solid grey;  
+          font-family:arial;
+          background-color:#CD4C00;
+          color:white;
+          cursor:pointer;
+          transition-duration: 0.4s;
+          }
+
+          .botao:hover {
+          background-color:white; 
+          color:#CD4C00;
+          }
+
+
+        </style>
+
+        <h1>Projeto Seletivo Future4</h1>
+
+      </head>
+
+  <body>
+  
+    <h2>
+        <div id="div1">
+          <img src="/future4.jpg" width="350px" alt="banner da Future4" title="Future4" max-width:100%;>
+        </div>
+    </h2>
+  </body>
+
+
+  <footer id="frase">
+      <strong> Turma Web Full Stack</strong>
+  </footer>
+
+  <div id="divfooter">
+  
     
-      }
+      <input type="email" id="emailrec" name="email" required="required" placeholder="Coloque seu e-mail para contato! :)">
 
-   #divmenu {
-      color:#FFFFFF;
-      line-height:1.8em;
-      word-spacing:30px;
-      font-family:arial;
-      letter-spacing:0px;
-      font-size:20px;
-      text-align:right;
-      border:10px;
-      padding:15px;
-      margin:-10px;
-      height:30px;
-      background-color:#CD4C00;
+      <button type="submit" class="botao" onclick="check()">ENVIAR</button>
+    
 
-   }
-
-		h1 {              /*estilo do títilo*/
-			color: #FFFFFF;
-			font-family: arial;
-      font-size: 25px;
-      letter-spacing:-1px;
-      text-align:center;
-      margin-top:170px;
-      margin-bottom:70px;
-
-  	}
-
-      #div1 {              /*estilo da div da imagem*/
-      display:flex;
-      align-items: center;
-      justify-content: center;
-     }
-
-      body{
-      background-color:#595F96;
+  </div>  
+  <script>   /* verificador do email */
+    function check() {
+      if (!document.getElementById("emailrec").checkValidity()) {
+        alert("Email inválido!");
+       } 
+        else {
+          emailValido();
+        }
     }
 
-		  #divfooter{     
-      text-align:center;
-      color:#FFFFFF;
-      height:100px;
-      width:100%;
-      margin:0px;
-      position:fixed;
-      bottom:0;
-      left:0;
-      background-color:#D8D8D8;
-      }
-
-      #frase{
-        
-        text-align:right;
-        position:fixed;
-        bottom:13%;
-        right:2%;
-        font-family:arial;
-        font-size:20px;
-        font-style:italic;
-      }
-
-
-      #email{
-        position:relative;
-        top:32px;
-        border:2px solid grey;
-        font-family:Arial;
-        letter-spacing:-1px;
-        font-size:16px;
-        width:250px;  
-        height:33px;
-
-      }
-
-      .botao{
-        position:relative;
-        top:30px;
-        left:-5px;
-        width:80px;
-        height:40px;
-        font-weight:600;
-        color:#fff;     
-        border:2px solid grey;  
-        font-family:arial;
-        background-color:#CD4C00;
-        color:white;
-        cursor:pointer;
-        transition-duration: 0.4s;
-                
-      }
-      .botao:hover {
-       background-color:white; 
-       color:#CD4C00;
-
-      }
-
-
-	</style>
-
-  <h1>Projeto Seletivo Future4</h1>
-
-</head>
-
-<body>
-  
-	<h2>
-
-    <div id="div1">
-      <img src="/future4.jpg" width="400px"/>
-    </div>
-  
-  </h2>
-</body>
-
-
-<div id="frase">
-    <strong> Turma Web Full Stack</strong>
-</div>
-
-<div id="divfooter">
- 
-    <input type="email" id="email" placeholder="Coloque seu e-mail para contato! :)">
-
-    <button class="botao">ENVIAR</button>
- 
-</div>  
-
-
-
-
-
+    function emailValido() {
+      
+      alert("Bem vindo " + emailrec.value +"!");
+      window.location.reload()
+    }
+  </script>
 </html>
